@@ -15,3 +15,9 @@
 1. Клонируйте репозиторий:
    https://github.com/mooncna/autotests_project1/
    git clone https://github.com/mooncna/autotests_project1/
+2. python -m venv venv
+venv\Scripts\activate
+pip install -r requirements.txt
+python -m pytest            — все тесты
+python -m pytest api_tests  — только API
+python -m pytest selenium_tests — только UI
