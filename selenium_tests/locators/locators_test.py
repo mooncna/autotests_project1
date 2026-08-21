@@ -83,7 +83,7 @@ def demo_login():
     burger = driver.find_element(By.ID, "react-burger-menu-btn")
     burger.click()
     time.sleep(2)  # ждём открытия меню
-    print("✅ По ID: кнопка меню (бургер) найдена")
+    print("✅ По ID: кнопка меню найдена")
 
     # 16. По ID — пункт Logout в меню
     logout_link = driver.find_element(By.ID, "logout_sidebar_link")
