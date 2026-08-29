@@ -2,17 +2,17 @@ from selenium.webdriver.common.by import By
 
 
 class CheckoutPageLocators:
-    """Локаторы для шагов оформления заказа."""
+    """Локаторы для шагов оформления заказа (checkout-step-one/two, checkout-complete)."""
 
-    # 1. Ввод данных покупателя
+    # 1. Ввод данных покупателя (checkout-step-one)
     first_name_input = (By.ID, "first-name")
     last_name_input = (By.ID, "last-name")
     postal_code_input = (By.ID, "postal-code")
     continue_button = (By.ID, "continue")
 
-    # 2. Обзор заказа (Кнопка "Finish" для финального подтверждения и завершения покупки)
-    finish_button = (By.ID, "finish")
+    # 2. Обзор заказа (checkout-step-two)
+    finish_button = (By.ID, "finish")  # Кнопка "Finish" для финального подтверждения покупки
 
-    # 3. Подтверждение заказа
-    complete_button = (By.CLASS_NAME, "complete-button") # Возврат в каталог товаров
-    back_button = (By.CLASS_NAME, "back-to-products")  # или кнопки возврата (дублирует функцию выше)
+    # 3. Подтверждение заказа (checkout-complete)
+    complete_header = (By.CLASS_NAME, "complete-header")  # Заголовок "Thank you for your order!"
+    back_home_button = (By.ID, "back-to-products")  # Кнопка возврата в каталог товаров
